@@ -114,6 +114,11 @@ const webdev = [
     name: "ongoing",
     link: "ongoing",
   },
+  {
+    id: 2,
+    name: "i modify it",
+    link: "ongoing",
+  },
 ];
 export default function Certificate() {
   const [isOpen, setIsOpen] = useState(null);

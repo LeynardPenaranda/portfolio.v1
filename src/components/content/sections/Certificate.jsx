@@ -111,13 +111,8 @@ const linuxCert = [
 const webdev = [
   {
     id: 1,
-    name: "ongoing",
-    link: "ongoing",
-  },
-  {
-    id: 2,
-    name: "i modify it",
-    link: "ongoing",
+    name: "The Complete Full-Stack Web Development Bootcamp",
+    link: "https://drive.google.com/file/d/1Ivin3pRCzz_xBgqWoMsYE5mUYGR5xXS6/view?usp=sharing",
   },
 ];
 export default function Certificate() {

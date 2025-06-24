@@ -39,7 +39,10 @@ export default function Profile() {
         </div>
       </div>
       <div className="profile-pic-container">
-        <img src="./images/Leynard.png" alt="Leynard Profile" />
+        <img
+          src={process.env.PUBLIC_URL + "/images/Leynard.png"}
+          alt="Leynard Profile"
+        />
       </div>
     </section>
   );

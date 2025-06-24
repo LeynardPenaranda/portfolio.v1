@@ -2,6 +2,7 @@ import AboutMe from "./sections/AboutMe";
 import Certificate from "./sections/Certificate";
 import Profile from "./sections/Profile";
 import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
 
 export default function Content() {
   return (
@@ -9,6 +10,7 @@ export default function Content() {
       <Profile />
       <Certificate />
       <Skills />
+      <Projects />
       <AboutMe />
     </>
   );

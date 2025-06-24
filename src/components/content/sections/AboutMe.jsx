@@ -7,7 +7,11 @@ export default function AboutMe() {
         <h2>About Me</h2>
       </div>
       <section className="about-me">
-        <img src="images/Leynard.png" alt="Leynard" id="me1" />
+        <img
+          src={process.env.PUBLIC_URL + "/images/Leynard.png"}
+          alt="Leynard"
+          id="me1"
+        />
 
         <Paragraph>
           <p>
@@ -27,7 +31,11 @@ export default function AboutMe() {
           </p>
         </Paragraph>
 
-        <img src="images/Leynard2.png" alt="Leynard 2" id="me2" />
+        <img
+          src={process.env.PUBLIC_URL + "/images/Leynard2.png"}
+          alt="Leynard 2"
+          id="me2"
+        />
       </section>
     </>
   );

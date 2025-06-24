@@ -6,22 +6,22 @@ const webDev = [
   {
     id: 1,
     name: "HTML",
-    image: "./images-skills/HTML.png",
+    image: process.env.PUBLIC_URL + "/images-skills/HTML.png",
   },
   {
     id: 2,
     name: "CSS",
-    image: "./images-skills/CSS.png",
+    image: process.env.PUBLIC_URL + "/images-skills/CSS.png",
   },
   {
     id: 3,
     name: "JS",
-    image: "./images-skills/JS.png",
+    image: process.env.PUBLIC_URL + "/images-skills/JS.png",
   },
   {
     id: 4,
     name: "REACT",
-    image: "./images-skills/REACT.png",
+    image: process.env.PUBLIC_URL + "/images-skills/REACT.png",
   },
 ];
 
@@ -29,12 +29,12 @@ const databaseArray = [
   {
     id: 1,
     name: "PostgresQL",
-    image: "./images-skills/PostGress.png",
+    image: process.env.PUBLIC_URL + "/images-skills/PostGress.png",
   },
   {
     id: 2,
     name: "STUDY",
-    image: "./images-skills/STUDY.png",
+    image: process.env.PUBLIC_URL + "/images-skills/STUDY.png",
   },
 ];
 export default function Skills() {

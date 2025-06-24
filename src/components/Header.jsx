@@ -7,7 +7,11 @@ export default function Header() {
       <div className="nav-container">
         <div className="nav-logo-container">
           <a href="#top">
-            <img className="img" src="images/mylogo.png" alt="My Logo" />
+            <img
+              className="img"
+              src={process.env.PUBLIC_URL + "/images/mylogo.png"}
+              alt="My Logo"
+            />
           </a>
         </div>
         <div className="nav-list-container">

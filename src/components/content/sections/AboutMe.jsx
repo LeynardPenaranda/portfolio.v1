@@ -1,16 +1,21 @@
 import { useState } from "react";
+import { useProps } from "../../PostProvider";
 
 export default function AboutMe() {
+  const { isDarkorLight } = useProps();
   return (
     <>
-      <div className="header-about-me" id="4">
+      <div
+        className={isDarkorLight ? "header-about-meDark" : "header-about-me"}
+        id="4"
+      >
         <h2>About Me</h2>
       </div>
-      <section className="about-me">
+      <section className={isDarkorLight ? "about-meDark" : "about-me"}>
         <img
           src={process.env.PUBLIC_URL + "/images/Leynard.png"}
           alt="Leynard"
-          id="me1"
+          id={isDarkorLight ? "me1Dark" : "me1"}
         />
 
         <Paragraph>
@@ -34,7 +39,7 @@ export default function AboutMe() {
         <img
           src={process.env.PUBLIC_URL + "/images/Leynard2.png"}
           alt="Leynard 2"
-          id="me2"
+          id={isDarkorLight ? "me2Dark" : "me2"}
         />
       </section>
     </>

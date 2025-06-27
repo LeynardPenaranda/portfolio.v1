@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useProps } from "../../PostProvider";
 import ItemCert from "./ItemCert";
 import SchoolIcon from "@mui/icons-material/School";
 
@@ -116,6 +117,7 @@ const webdev = [
   },
 ];
 export default function Certificate() {
+  const { isDarkorLight } = useProps();
   const [isOpen, setIsOpen] = useState(null);
 
   function toggleAccordion(accordionName) {
@@ -125,27 +127,58 @@ export default function Certificate() {
   }
 
   return (
-    <section className="certificate" id="2">
-      <div className="certificate-clip-path"></div>
+    <section
+      className={isDarkorLight ? "certificateDark" : "certificate"}
+      id="2"
+    >
+      <div
+        className={
+          isDarkorLight ? "certificate-clip-pathDark" : "certificate-clip-path"
+        }
+      ></div>
 
-      <div className="certificate-top-container">
+      <div
+        className={
+          isDarkorLight
+            ? "certificate-top-containerDark"
+            : "certificate-top-container"
+        }
+      >
         <h2>Certificates</h2>
       </div>
 
       {/* CyberSecurity accodion  */}
 
-      <div className="certificate-body-container">
-        <div className="certificate-background-design">
+      <div
+        className={
+          isDarkorLight
+            ? "certificate-body-containerDark"
+            : "certificate-body-container"
+        }
+      >
+        <div
+          className={
+            isDarkorLight
+              ? "certificate-background-designDark"
+              : "certificate-background-design"
+          }
+        >
           <i className="fa-solid fa-graduation-cap"></i>
         </div>
 
         <div
-          className={`accordion-cybersecurity accordion ${
-            isOpen === "cyber" ? `active` : ""
-          } `}
+          className={`${
+            isDarkorLight
+              ? `accordion-cybersecurityDark accordion`
+              : `accordion-cybersecurity accordion`
+          } ${isOpen === "cyber" ? `active` : ""} `}
           onClick={() => toggleAccordion("cyber")}
         >
-          <div className="accordion-header">
+          <div
+            className={
+              isDarkorLight ? "accordionDark-header" : "accordion-header"
+            }
+          >
             <h1>
               <SchoolIcon /> Cybersecurity Certificates
             </h1>
@@ -163,12 +196,18 @@ export default function Certificate() {
         {/* Networking Accordion  */}
 
         <div
-          className={`accordion-cybersecurity accordion ${
-            isOpen === "networking" ? `active` : ""
-          } `}
+          className={`${
+            isDarkorLight
+              ? `accordion-cybersecurityDark accordion`
+              : `accordion-cybersecurity accordion`
+          } ${isOpen === "networking" ? `active` : ""} `}
           onClick={() => toggleAccordion("networking")}
         >
-          <div className="accordion-header">
+          <div
+            className={
+              isDarkorLight ? "accordionDark-header" : "accordion-header"
+            }
+          >
             <h1>
               <SchoolIcon /> Networking Certificates
             </h1>
@@ -186,12 +225,18 @@ export default function Certificate() {
         {/* Linux and Sql  */}
 
         <div
-          className={`accordion-cybersecurity accordion ${
-            isOpen === "linux" ? `active` : ""
-          } `}
+          className={`${
+            isDarkorLight
+              ? `accordion-cybersecurityDark accordion`
+              : `accordion-cybersecurity accordion`
+          } ${isOpen === "linux" ? `active` : ""} `}
           onClick={() => toggleAccordion("linux")}
         >
-          <div className="accordion-header">
+          <div
+            className={
+              isDarkorLight ? "accordionDark-header" : "accordion-header"
+            }
+          >
             <h1>
               <SchoolIcon /> Linux and SQL Certificates
             </h1>
@@ -207,12 +252,18 @@ export default function Certificate() {
         {/* other certificates  */}
 
         <div
-          className={`accordion-cybersecurity accordion ${
-            isOpen === "other" ? `active` : ""
-          } `}
+          className={`${
+            isDarkorLight
+              ? `accordion-cybersecurityDark accordion`
+              : `accordion-cybersecurity accordion`
+          } ${isOpen === "other" ? `active` : ""} `}
           onClick={() => toggleAccordion("other")}
         >
-          <div className="accordion-header">
+          <div
+            className={
+              isDarkorLight ? "accordionDark-header" : "accordion-header"
+            }
+          >
             <h1>
               <SchoolIcon /> Other Certificates
             </h1>
@@ -227,12 +278,18 @@ export default function Certificate() {
         {/* other certificates  */}
 
         <div
-          className={`accordion-cybersecurity accordion ${
-            isOpen === "webdev" ? `active` : ""
-          } `}
+          className={`${
+            isDarkorLight
+              ? `accordion-cybersecurityDark accordion`
+              : `accordion-cybersecurity accordion`
+          } ${isOpen === "webdev" ? `active` : ""} `}
           onClick={() => toggleAccordion("webdev")}
         >
-          <div className="accordion-header">
+          <div
+            className={
+              isDarkorLight ? "accordionDark-header" : "accordion-header"
+            }
+          >
             <h1>
               <SchoolIcon /> Web Dev Certs
             </h1>

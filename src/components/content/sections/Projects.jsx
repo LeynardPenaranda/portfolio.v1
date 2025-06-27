@@ -1,3 +1,4 @@
+import { useProps } from "../../PostProvider";
 import Slider from "react-slick";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import "slick-carousel/slick/slick.css";
@@ -31,6 +32,7 @@ const projectsArray = [
 ];
 
 function Projects() {
+  const { isDarkorLight } = useProps();
   const settings = {
     dots: false,
     infinite: true,
@@ -45,22 +47,28 @@ function Projects() {
         breakpoint: 857,
         settings: {
           slidesToShow: 2,
-          arrows: true,
+          arrows: false,
         },
       },
       {
         breakpoint: 515,
         settings: {
           slidesToShow: 1,
-          arrows: true,
+          arrows: false,
         },
       },
     ],
   };
 
   return (
-    <section className="projects" id="5">
-      <div className="certificate-top-container">
+    <section className={isDarkorLight ? "projectsDark" : "projects"} id="5">
+      <div
+        className={
+          isDarkorLight
+            ? "certificate-top-containerDark"
+            : "certificate-top-container"
+        }
+      >
         <h2>Projects</h2>
       </div>
       <div className="projects-outer-container">
@@ -77,8 +85,9 @@ function Projects() {
 }
 
 function ProjectsDev({ card }) {
+  const { isDarkorLight } = useProps();
   return (
-    <div className="project-card">
+    <div className={isDarkorLight ? "project-cardDark" : "project-card"}>
       <img src={card.image} alt={card.name} />
       <div className="project-info-card">
         <div className="project-card-info-body">

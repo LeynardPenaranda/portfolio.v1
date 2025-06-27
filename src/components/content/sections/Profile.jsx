@@ -1,7 +1,12 @@
+import { useProps } from "../../PostProvider";
+
 export default function Profile() {
+  const { isDarkorLight } = useProps();
   return (
-    <section className="Profile">
-      <div className="intro-container">
+    <section className={isDarkorLight ? "ProfileDark" : "Profile"}>
+      <div
+        className={isDarkorLight ? "intro-containerDark" : "intro-container"}
+      >
         <h2>Hi! DON'T BE AFRAID TO EXPLORE MY PORTFOLIO</h2>
         <p>
           "Hi, I’m Leynard Peñaranda — I build modern, responsive web
@@ -10,7 +15,9 @@ export default function Profile() {
           experiences."
         </p>
 
-        <div className="icon-containers">
+        <div
+          className={isDarkorLight ? "icon-containersDark" : "icon-containers"}
+        >
           <ul>
             <li>
               <a href="mailto:leynardlove@gmail.com?subject=Hello&body=I%20love%20your%20design!">
@@ -38,7 +45,11 @@ export default function Profile() {
           </ul>
         </div>
       </div>
-      <div className="profile-pic-container">
+      <div
+        className={
+          isDarkorLight ? "profile-pic-containerDark" : "profile-pic-container"
+        }
+      >
         <img
           src={process.env.PUBLIC_URL + "/images/Leynard.png"}
           alt="Leynard Profile"

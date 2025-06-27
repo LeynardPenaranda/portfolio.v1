@@ -1,11 +1,17 @@
 import { useState } from "react";
+import { useProps } from "./PostProvider";
 
 export default function Header() {
+  const { isDarkorLight } = useProps();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="nav-wrapper">
-      <div className="nav-container">
-        <div className="nav-logo-container">
+    <div className={isDarkorLight ? "nav-wrapperDark" : `nav-wrapper`}>
+      <div className={isDarkorLight ? "nav-containerDark" : "nav-container"}>
+        <div
+          className={
+            isDarkorLight ? "nav-logo-containerDark" : "nav-logo-container"
+          }
+        >
           <a href="#top">
             <img
               className="img"
@@ -14,7 +20,11 @@ export default function Header() {
             />
           </a>
         </div>
-        <div className="nav-list-container">
+        <div
+          className={
+            isDarkorLight ? `nav-list-containerDark` : `nav-list-container`
+          }
+        >
           {isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
           <ul className="first-navbar">
             <li className="nav1">
@@ -36,8 +46,8 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  backgroundColor: "black",
-                  color: "white",
+                  backgroundColor: isDarkorLight ? "white" : "black",
+                  color: isDarkorLight ? "black" : "white",
                   borderRadius: "5px",
                   padding: "15px 25px",
                   marginRight: "20px",
@@ -48,7 +58,10 @@ export default function Header() {
             </li>
           </ul>
         </div>
-        <div className="bar" onClick={() => setIsOpen(!isOpen)}>
+        <div
+          className={isDarkorLight ? "barDark" : "bar"}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <i className="fa-solid fa-bars"></i>
         </div>
       </div>
@@ -57,10 +70,14 @@ export default function Header() {
 }
 
 function Sidebar({ isOpen, setIsOpen }) {
+  const { isDarkorLight } = useProps();
   return (
-    <div className="sidebar">
+    <div className={isDarkorLight ? "sidebarDark" : "sidebar"}>
       <ul>
-        <li className="exit" onClick={() => setIsOpen(!isOpen)}>
+        <li
+          className={isDarkorLight ? "exitDark" : "exit"}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <i className="fa-solid fa-x"></i>
         </li>
         <li>
@@ -89,10 +106,11 @@ function Sidebar({ isOpen, setIsOpen }) {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              backgroundColor: "black",
-              color: "white",
+              backgroundColor: isDarkorLight ? "white" : "black",
+              color: isDarkorLight ? "black" : "white",
               borderRadius: "5px",
-              padding: "4px 8px",
+              padding: "15px 25px",
+              marginRight: "20px",
             }}
           >
             Contact Me

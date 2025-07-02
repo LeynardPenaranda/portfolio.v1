@@ -1,3 +1,5 @@
+import { useProps } from "../../PostProvider";
+
 import ItemSkill from "./ItemSkill";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -38,6 +40,8 @@ const databaseArray = [
   },
 ];
 export default function Skills() {
+  const { isDarkorLight } = useProps();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -84,23 +88,37 @@ export default function Skills() {
   };
 
   return (
-    <section className="skills" id="3">
+    <section className={isDarkorLight ? "skillsDark" : "skills"} id="3">
       <img src="images/toplogy1.png" alt="" className="toplogy1" />
       <img src="images/toplogy3.png" alt="" className="toplogy3" />
       <img src="images/toplogy2.png" alt="" className="toplogy2" />
       <img src="images/toplogy4.png" alt="" className="toplogy4" />
 
-      <div className="skills-top-container">
+      <div
+        className={
+          isDarkorLight ? "skills-top-containerDark" : "skills-top-container"
+        }
+      >
         <h2>Skills</h2>
       </div>
 
       <div className="skills-body-container">
         {/* Web Development */}
         <div className="web-development-container">
-          <div className="title-header-container">
+          <div
+            className={
+              isDarkorLight
+                ? "title-header-containerDark"
+                : "title-header-container"
+            }
+          >
             <h3>Web Development</h3>
           </div>
-          <div className="web-cards-container">
+          <div
+            className={
+              isDarkorLight ? "web-cards-containerDark" : "web-cards-container"
+            }
+          >
             <Slider {...settings}>
               {webDev.map((webs) => (
                 <ItemSkill key={webs.id} webs={webs} />
@@ -111,10 +129,22 @@ export default function Skills() {
 
         {/* Database Management */}
         <div className="web-development-container database">
-          <div className="title-header-container">
+          <div
+            className={
+              isDarkorLight
+                ? "title-header-containerDark"
+                : "title-header-container"
+            }
+          >
             <h3>Database</h3>
           </div>
-          <div className="web-cards-container database-container-cards">
+          <div
+            className={
+              isDarkorLight
+                ? "web-cards-containerDark database-container-cardsDark"
+                : "web-cards-container database-container-cards"
+            }
+          >
             <Slider {...settingsDB}>
               {databaseArray.map((webs, index) => (
                 <ItemSkill key={index} webs={webs} />

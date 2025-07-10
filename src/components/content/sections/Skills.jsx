@@ -25,6 +25,16 @@ const webDev = [
     name: "REACT",
     image: process.env.PUBLIC_URL + "/images-skills/REACT.png",
   },
+  {
+    id: 5,
+    name: "TAILWIND CSS",
+    image: process.env.PUBLIC_URL + "/images-skills/tailwind.png",
+  },
+  {
+    id: 6,
+    name: "STYLED COMPONENT",
+    image: process.env.PUBLIC_URL + "/images-skills/styled-component.png",
+  },
 ];
 
 const databaseArray = [
@@ -35,8 +45,8 @@ const databaseArray = [
   },
   {
     id: 2,
-    name: "STUDY",
-    image: process.env.PUBLIC_URL + "/images-skills/STUDY.png",
+    name: "SUPABASE",
+    image: process.env.PUBLIC_URL + "/images-skills/supabase.png",
   },
 ];
 export default function Skills() {

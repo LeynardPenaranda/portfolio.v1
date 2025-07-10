@@ -836,11 +836,9 @@ footer {
 }
 .project-card:hover .project-info-card {
   opacity: 1;
-  cursor: pointer;
 }
 .project-cardDark:hover .project-info-card {
   opacity: 1;
-  cursor: pointer;
 }
 .project-card img {
   width: 100%;

@@ -7,7 +7,12 @@ function PostProvider({ children }) {
 
   return (
     <PropsContext.Provider
-      value={{ isOpen, setIsOpen, isDarkorLight, setisDarkorLight }}
+      value={{
+        isOpen,
+        setIsOpen,
+        isDarkorLight,
+        setisDarkorLight,
+      }}
     >
       {children}
     </PropsContext.Provider>

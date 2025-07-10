@@ -10,9 +10,10 @@ export default function Profile() {
         <h2>Hi! DON'T BE AFRAID TO EXPLORE MY PORTFOLIO</h2>
         <p>
           "Hi, I’m Leynard Peñaranda — I build modern, responsive web
-          applications using React and Next.js, backed by a strong foundation in
-          cybersecurity. I focus on creating secure, user-friendly digital
-          experiences."
+          applications using <b>React</b>, <b>Next.js</b>, and{" "}
+          <b>Tailwind CSS</b>, backed by a strong foundation in{" "}
+          <b>cybersecurity</b>. I focus on creating secure, user-friendly
+          digital experiences."
         </p>
 
         <div

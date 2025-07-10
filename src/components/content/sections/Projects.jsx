@@ -7,26 +7,20 @@ import "slick-carousel/slick/slick-theme.css";
 const projectsArray = [
   {
     id: 1,
-    name: "React Quiz",
-    image: process.env.PUBLIC_URL + "/images-skills/JS.png",
-    link: "",
+    name: "Fast Fizza Factory",
+    image: process.env.PUBLIC_URL + "/images/pizza.png",
+    link: "https://leynardpenaranda-fast-react-pizza.netlify.app/",
   },
   {
     id: 2,
-    name: "Portfolio Website",
-    image: process.env.PUBLIC_URL + "/images-skills/JS.png",
-    link: "",
+    name: "The Wild Oasis",
+    image: process.env.PUBLIC_URL + "/images/wildOasis.png",
+    link: "https://leynardpenaranda-the-wild-oasis.netlify.app/login",
   },
   {
     id: 3,
-    name: "Todo App",
-    image: process.env.PUBLIC_URL + "/images-skills/JS.png",
-    link: "",
-  },
-  {
-    id: 4,
-    name: "Weather App",
-    image: process.env.PUBLIC_URL + "/images-skills/JS.png",
+    name: "🚧🏗️🏗️",
+    image: process.env.PUBLIC_URL + "/images/undercons.png",
     link: "",
   },
 ];
@@ -92,7 +86,7 @@ function ProjectsDev({ card }) {
       <div className="project-info-card">
         <div className="project-card-info-body">
           <h2>{card.name}</h2>
-          <a href={card.link}>
+          <a href={card.link} target="_blank" rel="noopener noreferrer">
             <OpenInNewIcon className="NewTab-icon" />
           </a>
         </div>

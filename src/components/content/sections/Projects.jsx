@@ -13,9 +13,15 @@ const projectsArray = [
   },
   {
     id: 2,
-    name: "The Wild Oasis",
+    name: "The Wild Oasis Employee",
     image: process.env.PUBLIC_URL + "/images/wildOasis.png",
     link: "https://leynardpenaranda-the-wild-oasis.netlify.app/login",
+  },
+  {
+    id: 3,
+    name: "The Wild Oasis Website Guest",
+    image: process.env.PUBLIC_URL + "/images/cabin-website.png",
+    link: "https://the-wild-oasis-website-leynardpenar.vercel.app/",
   },
   {
     id: 3,

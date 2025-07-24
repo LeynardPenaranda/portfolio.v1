@@ -24,7 +24,13 @@ const projectsArray = [
     link: "https://the-wild-oasis-website-leynardpenar.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
+    name: "The (ShopeStore) is still ongoing",
+    image: process.env.PUBLIC_URL + "/images/shopeStore.png",
+    link: "https://shope-store-kqpx.vercel.app/",
+  },
+  {
+    id: 5,
     name: "🚧🏗️🏗️",
     image: process.env.PUBLIC_URL + "/images/undercons.png",
     link: "",

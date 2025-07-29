@@ -25,7 +25,7 @@ const projectsArray = [
   },
   {
     id: 4,
-    name: "The (ShopeStore) is still ongoing",
+    name: "The ShopeStore an E-commerce website",
     image: process.env.PUBLIC_URL + "/images/shopestore3.png",
     link: "https://shope-store-kqpx.vercel.app/",
   },

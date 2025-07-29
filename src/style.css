@@ -406,7 +406,7 @@ html {
   max-height: 90rem;
   background-color: #f0f0f0;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .certificateDark {
   width: 100%;

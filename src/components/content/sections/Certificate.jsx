@@ -120,6 +120,11 @@ const webdev = [
     name: "React/Next.js Course",
     link: "https://drive.google.com/file/d/1kmNDpOCbZEOehdhIFjeILcrVg_wRDjUJ/view?usp=sharing",
   },
+  {
+    id: 3,
+    name: "Next.js Ecommerce Shopping Platform from Scratch",
+    link: "https://drive.google.com/file/d/1U7U3zI32BeiAQcznP2deW2NKaHAUyvzM/view?usp=sharing",
+  },
 ];
 export default function Certificate() {
   const { isDarkorLight } = useProps();
